@@ -25,7 +25,7 @@ function renderTabs(){
 }
 function renderGrid(){
  $("#grid").innerHTML=MENU.filter(m=>tab==="All"||m.cat===tab).map(m=>`
- <article class="card"><img src="images/${m.img}.jpg" alt="${m.name}" loading="lazy">
+ <article class="card"><img src="${IMG[m.img]}" alt="${m.name}" loading="lazy">
  <div class="body"><h3>${m.name}</h3>${m.si?`<span class="si2">${m.si}</span>`:""}<p>${m.desc}</p>
  <div class="buy"><span class="price">${money(m.price)}</span><button class="add" data-id="${m.id}">Add to order</button></div></div></article>`).join("");
 }
@@ -66,3 +66,5 @@ $("#send").addEventListener("click",()=>{
 const hello=`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Shamila Kitchen, I would like to place an order.")}`;
 $("#quickWa").href=hello;$("#footWa").href=hello;
 renderTabs();renderGrid();renderCart();
+
+document.getElementById("heroImg").src=IMG["rice-curry"];

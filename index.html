@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shamila Kitchen | Home-made Sri Lankan food, order on WhatsApp</title>
+<meta name="description" content="Rice & curry packets, dinner boxes, bittara roti, appa and isso wade. Home-made Sri Lankan food. Order on WhatsApp.">
+<meta name="theme-color" content="#12301f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍛</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=Noto+Sans+Sinhala:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#top">Shamila Kitchen</a>
+  <nav><a href="#menu">Menu</a><a href="#how">How to order</a><a href="#contact">Contact</a></nav>
+  <button class="cartbtn" id="openCart" aria-label="Open your order">Your order <b id="cartCount">0</b></button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <p class="si">අද රසටම රස බත් පැකට් එක</p>
+    <h1>Home-made Sri Lankan food, ready when you are.</h1>
+    <p class="lead">Rice &amp; curry packets, dinner boxes, bittara roti, appa and isso wade. Cooked fresh at home and sent to you after you order on WhatsApp.</p>
+    <div class="cta">
+      <a class="btn primary" href="#menu">See the menu</a>
+      <a class="btn ghost" id="quickWa" href="#">Message us on WhatsApp</a>
+    </div>
+  </div>
+  <div class="plate"><img src="images/rice-curry.jpg" alt="Rice and curry packet with chicken curry, cashew curry, dhal, brinjal moju, salad and papadam" width="690" height="700"><span class="stamp">Rice &amp; curry packet<br><b>€7</b></span></div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2>Today’s menu</h2>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <h2>How to order</h2>
+    <ol>
+      <li><b>Pick your food.</b> Add items to your order and choose how many.</li>
+      <li><b>Send on WhatsApp.</b> Your order opens as a ready-written message to us.</li>
+      <li><b>We confirm.</b> We reply with the total and when it will be ready, for pick-up or delivery.</li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <div><b>Shamila Kitchen</b><p>Home made. Fresh. Delicious.</p></div>
+    <div><a class="btn primary" id="footWa" href="#">Order on WhatsApp</a><p>0761282023</p></div>
+  </div>
+</footer>
+
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head"><h3>Your order</h3><button id="closeCart" aria-label="Close">Close</button></div>
+  <div id="lines" class="lines"></div>
+  <div class="form" id="form">
+    <label>Your name<input id="name" autocomplete="name" placeholder="Name"></label>
+    <fieldset><legend>Pick-up or delivery</legend>
+      <label class="r"><input type="radio" name="mode" value="Pick-up" checked> Pick-up</label>
+      <label class="r"><input type="radio" name="mode" value="Delivery"> Delivery</label>
+    </fieldset>
+    <label id="addrWrap" hidden>Delivery address<textarea id="addr" rows="2" placeholder="Street, number, city"></textarea></label>
+    <label>Notes (spice level, allergies, time)<textarea id="note" rows="2"></textarea></label>
+    <div class="total"><span>Total</span><b id="total">€0</b></div>
+    <button class="btn wa" id="send">Send order on WhatsApp</button>
+    <p class="fine">Delivery costs, if any, are confirmed by us on WhatsApp.</p>
+  </div>
+</aside>
+<div class="scrim" id="scrim"></div>
+<script src="app.js"></script>
+</body>
+</html>
